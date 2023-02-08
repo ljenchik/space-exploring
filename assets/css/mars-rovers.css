@@ -12,6 +12,7 @@ body {
     border: 3px double rgb(223, 94, 9);
     border-radius: 10px;
     offset: -10px;
+    height: 650px;
 }
 
 .card img {
