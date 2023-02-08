@@ -1,0 +1,24 @@
+body {
+    background-color: rgba(9, 28, 91, 0.841);
+}
+
+.card-container {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+}
+
+.card {
+    border: 3px double rgb(223, 94, 9);
+    border-radius: 10px;
+    offset: -10px;
+}
+
+.card img {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.card:hover {
+    box-shadow: 0 0 20px #ccc;
+}
