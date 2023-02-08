@@ -18,15 +18,14 @@
     <title>Space Exploring</title>
 </head>
 <body>
-    <header></header>
+    <header class="jumbotron">
+        <div class="container text-center">
+            <h2>Welcome to the Learning Space!</h2>
+            <p>Add some info about rovers and Mars</p>
+        </div>
+    </header>
 
-<main>
-    <div class="jumbotron">
-        <h2 class="display-4">Welcome to the Learning Space!</h2>
-      </div>
-
-
-      <div class="container-fluid ">
+      <main class="container-fluid">
         <div class="row"> 
 
             <!-- Card 1 --> 
@@ -38,7 +37,6 @@
                     <h5><strong>Sojourner</strong></h5>
                     <p>The first wheeled vehicle to rove on a planet other than Earth</p>
                     <p>Landed: July, 1997</p>
-                    <p>Worked on Mars for 95 days</p>
                     <p>Mission: To test in the Martian environment technical solutions that were 
                         developed by engineers of the NASA research laboratories</p>
                         <a href="https://spaceplace.nasa.gov/mars-sojourner/en/"> <img src="images/nasa-logo.png" width="50px"> Sojouner</a>
@@ -56,8 +54,6 @@
                     <h5><strong>Spirit and Opportunity</strong></h5>
                     <p>Twin robotic rovers lived well beyond their planned 90-day missions</p>
                     <p>Landed: January, 2004</p>
-                    <p>Opportunity worked on Mars for 14 years and 138 days,
-                        Spirit for 6 years and 77 days
                     </p>Mission: To find evidence of water on Mars</p>
                     <a href="https://spaceplace.nasa.gov/mars-spirit-opportunity/en/"> <img src="images/nasa-logo.png" width="50px"> Spirit and Opportunity </a>
                 </p>
@@ -73,7 +69,6 @@
                   <p class="card-text"><h5><strong>Curiosity</strong></h5>
                     <p>Curiosity is a car-sized Mars rover designed to explore the Gale crater on Mars</p>
                     <p>Landed: August, 2012 </p>
-                    <p>Worked on Mars for: 10 years and 185 days</p>
                     <p>Mission: To find out if Mars once had what all life needs, lasting water and the right chemicals</p>
                         <a href="https://spaceplace.nasa.gov/mars-curiosity/en/"> <img src="images/nasa-logo.png" width="50px"> Curiosity </a>
                 </p>
@@ -87,9 +82,8 @@
                 <img class="card-img-top" src="images/perseverance.png" alt="Mars rover Perseverance">
                 <div class="card-body">
                   <p class="card-text"><h5><strong>Perseverance</strong></h5>
+                    <p>Perseverance is similar to Curiosity, carries a small robotic helicopter </p>
                     <p>Landed: February, 2021</p>
-                    <p>Perseverance is similar to Curiosity and carries a small robotic helicopter </p>
-                    <p>Currently is operating on Mars</p>
                     <p>Mission: To seek out evidence of former life, 
                         collect rock and soil samples, and 
                         test oxygen production from the Martian atmosphere</p>
@@ -99,17 +93,18 @@
               </div>
             </div>
 
-          </div>
-        </div>
-  
-</main>
-    
-    
+         
+ 
+ 
+    </main>
+    <div id="mars-images"> </div>
 
-     <!-- Moment.js -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-     <!-- jQuery -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
      <script src="assets/js/mars-rovers.js"></script>
 </body>
 </html>
