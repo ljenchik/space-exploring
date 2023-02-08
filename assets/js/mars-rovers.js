@@ -8,17 +8,13 @@ perseveranceEl.on("click", function (event) {
     event.preventDefault();
 
   $(".container-fluid").empty();
-    let datePickerEl = $("<div>");
-    let datePickerText = $("<p>").text('Choose a date to see images taken by Perseverance on this date');
-    datePickerEl.append(datePickerText).addClass('date-label');
-
-    let datePickerDateEl = $("<input>").attr("id", "perseverance-images").attr("type", "text").datepicker();
+    let datePickerEl = $("<div>").text('Choose a date to see images taken by Perseverance on this date');
+    
+    let datePickerDateEl = $("#datepicker").datepicker();
     datePickerEl.append(datePickerDateEl);
     
-
-
-    let date = $("#perseverance-images").val();
-    console.log(moment(date).format("DD/MM/YYYY"));
+    let dateEl = datePickerDateEl.val();
+    console.log(moment(dateEl).format("DD/MM/YYYY"));
 
     marsImagesEl.append(datePickerEl);
   })
