@@ -1,25 +1,43 @@
 nasaApikey = "zhH0KJERQo5hx19MxD3hGmt6jiaOqgfd8bmoWQPd";
 
 let perseveranceEl = $("#Perseverance");
-let marsImagesEl = $("#mars-images");
+let dateInput = "2021-02-18"
 
 
 perseveranceEl.on("click", function (event) {
     event.preventDefault();
+    let marsImagesEl = $("#mars-images");
+    let datePickerDateEl = $("#datepicker");
 
-  $(".container-fluid").empty();
-    let datePickerEl = $("<div>").text('Choose a date to see images taken by Perseverance on this date');
-    
-    let datePickerDateEl = $("#datepicker").datepicker();
-    datePickerEl.append(datePickerDateEl);
-    
-    let dateEl = datePickerDateEl.val();
-    console.log(moment(dateEl).format("DD/MM/YYYY"));
+    $(".container-fluid").empty();
+    marsImagesEl.removeClass('hide');
 
-    marsImagesEl.append(datePickerEl);
+    datePickerDateEl.datepicker({
+      onSelect: function(dateText) {
+          console.log(dateText);
+          dateInput = dateText;
+            minDate = 1;
+      }
+    });
+  })
+
+  $.ajax({
+      url: perseveranceQueryURL(dateInput),
+      method: "GET",
+    }).then(function (response) {
+      console.log(response.photos[0].img_src);
+
   })
 
 
+  function perseveranceQueryURL(date) {
+    let query = "https://api.nasa.gov/mars-photos/api/v1/rovers/perseverance/photos?";
+    let queryParams = { api_key: nasaApikey};
+    queryParams.earth_date = date;
+    return query + $.param(queryParams);
+  }
  
-
- 
+ // style datepicker
+ // carousel for images
+ // text for header
+ // media queries for the cards
