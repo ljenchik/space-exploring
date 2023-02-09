@@ -101,8 +101,60 @@
  
     </main>
     <div id="mars-images" class="hide p-3">
-      <div id="choose-date px-3">Choose a date to see images taken by Perseverance on this date</div>
-      <input id="datepicker" data-date-format="dd/mm/yyyy" placeholder="18/02/2021">
+      <div id="choose-date" class="hide">Choose a date to see images taken by Perseverance on this date</div>
+      <input id="datepicker" class="hide" data-date-format="dd/mm/yyyy" placeholder="18/02/2021">
+      <div class="container images-carousel">
+        <div class="row">
+          <div class="col-md-12">
+            <div id="custCarousel" class="carousel slide" data-ride="carousel" align="center">
+              <!-- slides -->
+              <div class="carousel-inner">
+                
+              </div>
+      
+              <!-- Left right -->
+              <a class="carousel-control-prev" href="#custCarousel" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </a>
+              <a class="carousel-control-next" href="#custCarousel" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </a>
+      
+              <!-- Thumbnails -->
+              <ol class="carousel-indicators list-inline">
+                <li class="list-inline-item active">
+                  <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel">
+                    <img src="https://i.imgur.com/weXVL8M.jpg" class="img-fluid">
+                  </a>
+                </li>
+      
+                <li class="list-inline-item">
+                  <a id="carousel-selector-1" data-slide-to="1" data-target="#custCarousel">
+                    <img src="https://i.imgur.com/Rpxx6wU.jpg" class="img-fluid">
+                  </a>
+                </li>
+      
+                <li class="list-inline-item">
+                  <a id="carousel-selector-2" data-slide-to="2" data-target="#custCarousel">
+                    <img src="https://i.imgur.com/83fandJ.jpg"  class="img-fluid">
+                  </a>
+                </li>
+      
+                 <li class="list-inline-item">
+                  <a id="carousel-selector-2" data-slide-to="3" data-target="#custCarousel">
+                    <img src="https://i.imgur.com/JiQ9Ppv.jpg"  class="img-fluid">
+                  </a>
+                </li>
+               </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      
     </div>
 
 
