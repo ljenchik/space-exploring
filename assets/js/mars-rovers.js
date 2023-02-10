@@ -5,7 +5,7 @@ let marsImagesEl = $("#mars-images");
 let datepickerEl = $("#datepicker");
 let datepickerTextEl = $("#choose-date");
 let thumbsList = $("ol");
-let selectedImages = [];
+let active = $("<div>");
 
 imageEl.on("click", function (event) {
   event.preventDefault();
@@ -14,9 +14,10 @@ imageEl.on("click", function (event) {
   datepickerEl.removeClass("hide");
   datepickerTextEl.removeClass("hide");
 
-
+  // Displays images from the first available day
   queryImages("2021-02-18");
 
+  // Pick a date
   datepickerEl.datepicker({
     dateFormat: "dd/mm/yy",
     minDate: "18/02/2021",
@@ -29,6 +30,7 @@ imageEl.on("click", function (event) {
   });
 });
 
+// Build query to api
 function perseveranceQueryURL(date) {
   if (date) {
     let query =
@@ -40,6 +42,7 @@ function perseveranceQueryURL(date) {
   }
 }
 
+// Get images from api response and display them in carousel
 function queryImages(selectedDate) {
   $.ajax({
     url: perseveranceQueryURL(selectedDate),
@@ -52,13 +55,14 @@ function queryImages(selectedDate) {
     const shuffled = images.sort(() => 0.5 - Math.random());
     // Get sub-array of first n elements after shuffled
     let selected = shuffled.slice(0, 10);
-
+    let selectedImages = [];
     selected.forEach((item) => selectedImages.push(item.img_src));
     console.log(selectedImages);
 
     $("#left-arrow").removeClass("hide");
     $("#right-arrow").removeClass("hide");
     $("#thumbs-list").removeClass("hide");
+
 
     let active = $("<div>")
       .addClass("carousel-item active")
