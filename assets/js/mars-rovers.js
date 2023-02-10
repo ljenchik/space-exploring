@@ -14,7 +14,6 @@ imageEl.on("click", function (event) {
   datepickerEl.removeClass("hide");
   datepickerTextEl.removeClass("hide");
 
-
   queryImages("2021-02-18");
 
   datepickerEl.datepicker({
@@ -24,6 +23,8 @@ imageEl.on("click", function (event) {
     "autoclose": true,
     onSelect: function (selectedDate) {
       // Formats date to yyy-mm-dd for api query
+      $(".carousel-item").removeClass('active');
+      selectedImages = [];
       queryImages(selectedDate.split("/").reverse().join("-"));
     },
   });
@@ -53,6 +54,7 @@ function queryImages(selectedDate) {
     // Get sub-array of first n elements after shuffled
     let selected = shuffled.slice(0, 10);
 
+    selectedImages = [];
     selected.forEach((item) => selectedImages.push(item.img_src));
     console.log(selectedImages);
 
@@ -98,7 +100,6 @@ function queryImages(selectedDate) {
       );
       thumbsList.append(thumb);
     }
-
   });
 }
 
