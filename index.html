@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  
 
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    /> -->
     <link rel="stylesheet" href="./assets/css/style.css" />
 
     <title>Space Exploring</title>
@@ -28,13 +30,17 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
           <ul class="navbar-nav justify-content-end">
             <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
               <a class="nav-link" href="#">Learning Space<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Mars Images<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="mars-rovers.html">Mars Images<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Quiz<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="quiz.html">Quiz<span class="sr-only">(current)</span></a>
+              
             </li>
 
           </ul>
@@ -56,9 +62,9 @@
 
         <div class="container">
           <div class="carousel-caption text-start">
-            <h1>Example headline.</h1>
-            <p>Some representative placeholder content for the first slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+            <h1>Welcome to the Space Exploring!</h1>
+            <p>Begin a journey that offers a deeper and more comprehensive view of the universe and our place in it.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Get Started</a></p>
           </div>
         </div>
       </div>
@@ -66,9 +72,9 @@
         
         <div class="container">
           <div class="carousel-caption">
-            <h1>Another example headline.</h1>
-            <p>Some representative placeholder content for the second slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+            <h1>Quiz</h1>
+            <p>Test your knowledge about space in this amazing quiz.</p>
+            <p><a class="btn btn-lg btn-primary" href="quiz.html">Learn more</a></p>
           </div>
         </div>
       </div>
@@ -77,8 +83,8 @@
 
         <div class="container">
           <div class="carousel-caption text-end">
-            <h1>One more for good measure.</h1>
-            <p>Some representative placeholder content for the third slide of this carousel.</p>
+            <h1>Gallery</h1>
+            <p>See amazing photos taken in space.</p>
             <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
           </div>
         </div>
@@ -104,25 +110,47 @@
     <!-- Three columns of text below the carousel -->
     <div class="row">
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        <div class="holder">
+          <i class="fas fa-sun beat" style="line-height: 140px; font-size: 90px; color: yellow;"></i>
+          <i class="fa-light fa-earth-americas"></i>
+          <!-- <i class="fas fa-globe fa-spin" style="line-height: 140px; font-size: 80px; color: blue;"></i> -->
+          
+        </div>
 
-        <h2>Heading</h2>
-        <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+        <h2>Did you know?</h2>
+        <br>
+        <h6>THE SUNSET ON MARS APPEARS BLUE</h6>
+        <br>
+        <p class="textContent">Just as colors are made more dramatic in sunsets on Earth, sunsets on Mars, according to NASA,  would appear bluish to human observers watching from the red planet. Fine dust makes the blue near the Sun's part of the sky much more visibilke, while normal daylight makes the Red Planet's familiar rusty dust color the most perceptible to the human eye.</p>
+        <!-- <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p> -->
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-        <h2>Heading</h2>
-        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+        <div class="holder">
+          
+          <i class="fas fa-globe-americas fa-spin" style="line-height: 140px; font-size: 90px; color: rgb(58, 58, 215); animation-duration: 15s;"></i>
+          
+        </div>
+        
+        <h2>Did you know?</h2>
+        <br>
+        <h6>ONE DAY ON VENUS IS LONGER THAN ONE YEAR</h6>
+        <p class="textContent">Venus has a slow axis rotation which takes 243 Earth days to complete its day. The orbit of Venus around the Sun is 225 Earth days, making a year on Venus 18 days less than a day on Venus.</p>
+        <!-- <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p> -->
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-        <h2>Heading</h2>
-        <p>And lastly this, the third column of representative placeholder content.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+        
+        <div class="holder">
+          
+          <i class="fas fa-rocket beat" style="line-height: 140px; font-size: 90px; color: rgb(71, 69, 69);"></i>
+          
+        </div>
+        
+        <h2>Did you know?</h2>
+        <br>
+        <h6>THERE ARE MORE STARS IN THE UNIVERSE THAN GRAINS OF SANDS ON EARTH</h6>
+        <br>
+        <p class="textContent">The universe extends far beyond our own galaxy, The Milky Way, which is why scientists can only estimate how many stars are in space.  However, scientists estimate the universe contains approximately <br> 1,000,000,000,000,000,000,000,000<br> stars, or a septillion.   While no one can actually count every single grain of sand on the earth, the estimated total from researchers at the University of Hawaii, is somewhere around seven quintillion, five hundred quadrillion grains.  That is an awfully big sand castle!.</p>
+        <!-- <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p> -->
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
 
@@ -133,11 +161,13 @@
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-        <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+        <h2 class="featurette-heading">Join us in exploring the mysteries of the universe!  <span class="text-muted">Learning Space.</span></h2>
+        <p class="lead">Join us in exploring the mysteries of the universe! <br> Learn about the stars, planets, and galaxies that make up our outer space.</p>
       </div>
       <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+        <img src="./images/learningSpace.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" role="img" aria-label="Placeholder: 500x500">
+
+        <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
 
       </div>
     </div>
@@ -146,11 +176,12 @@
 
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+        <h2 class="featurette-heading">Discover the red planet like never before! <span class="text-muted">Mars Images.</span></h2>
+        <p class="lead">Find out more on the Mars images to explore its unique features and landscapes</p>
       </div>
       <div class="col-md-5 order-md-1">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+        <a href="quiz.html"><img src="./images/marsPlanet.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" role="img" aria-label="Placeholder: 500x500"></a>
+        <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
 
       </div>
     </div>
@@ -159,11 +190,12 @@
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-        <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+        <h2 class="featurette-heading">Are you a universe expert? <span class="text-muted">take a Quiz.</span></h2>
+        <p class="lead">Put your space knowledge to the test!<br>Find out more on the quiz and see how much you know about the universe and beyond.</p>
       </div>
       <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+        <img src="./images/quiz.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" role="img" aria-label="Placeholder: 500x500">
+        <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
 
       </div>
     </div>
@@ -178,7 +210,7 @@
   <!-- FOOTER -->
   <footer class="container">
     <p class="float-end"><a href="#">Back to top</a></p>
-    <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    <!-- <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p> -->
   </footer>
 </main>
 
