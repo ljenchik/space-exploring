@@ -12,6 +12,7 @@ body {
     border: 3px double rgb(223, 94, 9);
     border-radius: 10px;
     offset: -10px;
+    height: 600px;
 }
 
 .card img {
@@ -21,4 +22,48 @@ body {
 
 .card:hover {
     box-shadow: 0 0 20px #ccc;
+}
+
+.date-label {
+    text-align: center;
+    color: white;
+}
+
+.hide {
+    display: none;
+}
+
+#mars-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    color: white;
+    padding: 10px;
+}
+
+#mars-images img {
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+.thumbs-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 60%;
+    padding: 0px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.img-fluid {
+    width: 90% !important;
+    border: 1px solid grey;
 }
