@@ -1,0 +1,19 @@
+body{
+    background-color: #06070Cff;
+    margin: 0px;
+    padding: 0px;
+}
+
+#planets {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 0px;
+}
+
+
+
+
+
+
+
