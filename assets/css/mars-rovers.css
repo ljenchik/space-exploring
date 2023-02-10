@@ -50,3 +50,20 @@ body {
 }
 
 
+.thumbs-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 60%;
+    padding: 0px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.img-fluid {
+    width: 90% !important;
+    border: 1px solid grey;
+}

@@ -4,7 +4,8 @@ let titleEl = $("#Perseverance-rover");
 let marsImagesEl = $("#mars-images");
 let datepickerEl = $("#datepicker");
 let datepickerTextEl = $("#choose-date");
-let thumbsList = $("ol");
+let listIndicators = $("ol");
+let thumbsList = $("<ul>");
 let selectedImages = [];
 
 imageEl.on("click", function (event) {
@@ -63,7 +64,8 @@ function queryImages(selectedDate) {
     $("#thumbs-list").removeClass("hide");
     
     $('.carousel-inner').empty();
-    $('ol').empty();
+    listIndicators.empty();
+    thumbsList.empty();
 
     let active = $("<div>")
       .addClass("carousel-item active")
@@ -71,19 +73,17 @@ function queryImages(selectedDate) {
     $(".carousel-inner").append(active);
 
     // First active thumbnail image
-   
-
     let activeThumb = $("<li>").addClass("list-inline-item active");
-    let thumbLinkActive = $("<a>")
-      .attr("id", "carousel-selector-0")
-      .addClass("selected")
-      .attr("data-slide-to", "0")
-      .attr("data-target", "#custCarousel");
-    activeThumb.append(thumbLinkActive);
-    thumbLinkActive.append(
-      $("<img>").attr("src", selectedImages[0]).addClass("img-fluid")
-    );
-    thumbsList.append(activeThumb);
+    // let thumbLinkActive = $("<a>")
+    //   .attr("id", "carousel-selector-0")
+    //   .addClass("selected")
+    //   .attr("data-slide-to", "0")
+    //   .attr("data-target", "#custCarousel");
+    // activeThumb.append(thumbLinkActive);
+    // thumbLinkActive.append(
+    //   $("<img>").attr("src", selectedImages[0]).addClass("img-fluid")
+    // );
+    listIndicators.append(activeThumb);
 
     for (let i = 1; i < selectedImages.length; i++) {
       // Adds images to hero section
@@ -94,17 +94,35 @@ function queryImages(selectedDate) {
 
       // Adds images to thumbnail section
       let thumb = $("<li>").addClass("list-inline-item");
+      // let thumbLink = $("<a>")
+      //   .attr("id", `carousel-selector-${i}`)
+      //   .attr("data-slide-to", `${i}`)
+      //   .attr("data-target", "#custCarousel");
+
+      // thumb.append(thumbLink);
+      // thumbLink.append(
+      //   $("<img>").attr("src", selectedImages[i]).addClass("img-fluid")
+      // );
+      listIndicators.append(thumb);
+    }
+
+
+    thumbsList.addClass('thumbs-container');
+    marsImagesEl.append(thumbsList);
+    for (let i = 1; i < selectedImages.length; i++) {
+      // Adds images to thumbnail section
       let thumbLink = $("<a>")
         .attr("id", `carousel-selector-${i}`)
         .attr("data-slide-to", `${i}`)
         .attr("data-target", "#custCarousel");
 
-      thumb.append(thumbLink);
       thumbLink.append(
         $("<img>").attr("src", selectedImages[i]).addClass("img-fluid")
       );
-      thumbsList.append(thumb);
+      thumbsList.append(thumbLink);
     }
+
+
   });
 }
 
