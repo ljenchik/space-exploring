@@ -61,6 +61,9 @@ function queryImages(selectedDate) {
     $("#left-arrow").removeClass("hide");
     $("#right-arrow").removeClass("hide");
     $("#thumbs-list").removeClass("hide");
+    
+    $('.carousel-inner').empty();
+    $('ol').empty();
 
     let active = $("<div>")
       .addClass("carousel-item active")
@@ -68,6 +71,8 @@ function queryImages(selectedDate) {
     $(".carousel-inner").append(active);
 
     // First active thumbnail image
+   
+
     let activeThumb = $("<li>").addClass("list-inline-item active");
     let thumbLinkActive = $("<a>")
       .attr("id", "carousel-selector-0")
