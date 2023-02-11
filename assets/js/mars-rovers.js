@@ -4,17 +4,21 @@ let titleEl = $("#Perseverance-rover");
 let marsImagesEl = $("#mars-images");
 let datepickerEl = $("#datepicker");
 let datepickerTextEl = $("#choose-date");
-let listIndicators = $("ol");
-let thumbsList = $("<ul>");
+let heroImages = $(".carousel-inner");
+let carouselIndicators = $(".carousel-indicators");
+let carouselContainer = $(".carousel-container");
+let prevArrow = $(".carousel-control-prev");
+let nexrArrow = $(".carousel-control-next");
+let errorMessage =$("<div>");
 let selectedImages = [];
 
 imageEl.on("click", function (event) {
   event.preventDefault();
 
   $(".container-fluid").empty();
-  datepickerEl.removeClass("hide");
-  datepickerTextEl.removeClass("hide");
-
+  $(".datepicker-text").removeClass("hide");
+  carouselContainer.removeClass('hide');
+  
   queryImages("2021-02-18");
 
   datepickerEl.datepicker({
@@ -25,7 +29,6 @@ imageEl.on("click", function (event) {
     onSelect: function (selectedDate) {
       // Formats date to yyy-mm-dd for api query
       $(".carousel-item").removeClass('active');
-      selectedImages = [];
       queryImages(selectedDate.split("/").reverse().join("-"));
     },
   });
@@ -47,83 +50,75 @@ function queryImages(selectedDate) {
     url: perseveranceQueryURL(selectedDate),
     method: "GET",
   }).then(function (response) {
-    console.log(response.photos);
+    if (!response.photos || response.photos.length === 0) {
+      
+      heroImages.empty();
+      carouselIndicators.empty();
+      prevArrow.addClass('hide');
+      nexrArrow.addClass('hide');
+
+      errorMessage.text("Np photographs were taken on this date. Please choose another date");
+      carouselContainer.append(errorMessage);
+    }
+else {
+      errorMessage.empty();
+      heroImages.empty();
+      carouselIndicators.empty();
+      prevArrow.removeClass('hide');
+      nexrArrow.removeClass('hide');
 
     let images = response.photos;
     // Shuffle array
     const shuffled = images.sort(() => 0.5 - Math.random());
     // Get sub-array of first n elements after shuffled
     let selected = shuffled.slice(0, 10);
-
     selectedImages = [];
     selected.forEach((item) => selectedImages.push(item.img_src));
     console.log(selectedImages);
 
-    $("#left-arrow").removeClass("hide");
-    $("#right-arrow").removeClass("hide");
-    $("#thumbs-list").removeClass("hide");
-    
-    $('.carousel-inner').empty();
-    listIndicators.empty();
-    thumbsList.empty();
-
-    let active = $("<div>")
+    // First hero image
+    let heroImage = $("<div>")
       .addClass("carousel-item active")
       .append($("<img>").attr("src", selectedImages[0]));
-    $(".carousel-inner").append(active);
+    heroImages.append(heroImage);
 
-    // First active thumbnail image
-    let activeThumb = $("<li>").addClass("list-inline-item active");
-    // let thumbLinkActive = $("<a>")
-    //   .attr("id", "carousel-selector-0")
-    //   .addClass("selected")
-    //   .attr("data-slide-to", "0")
-    //   .attr("data-target", "#custCarousel");
-    // activeThumb.append(thumbLinkActive);
-    // thumbLinkActive.append(
-    //   $("<img>").attr("src", selectedImages[0]).addClass("img-fluid")
-    // );
-    listIndicators.append(activeThumb);
-
+    // Hero images
     for (let i = 1; i < selectedImages.length; i++) {
-      // Adds images to hero section
       let imageEl = $("<div>")
         .addClass("carousel-item")
         .append($("<img>").attr("src", selectedImages[i]));
-      $(".carousel-inner").append(imageEl);
-
-      // Adds images to thumbnail section
-      let thumb = $("<li>").addClass("list-inline-item");
-      // let thumbLink = $("<a>")
-      //   .attr("id", `carousel-selector-${i}`)
-      //   .attr("data-slide-to", `${i}`)
-      //   .attr("data-target", "#custCarousel");
-
-      // thumb.append(thumbLink);
-      // thumbLink.append(
-      //   $("<img>").attr("src", selectedImages[i]).addClass("img-fluid")
-      // );
-      listIndicators.append(thumb);
+      heroImages.append(imageEl);
     }
 
+    // First active thumb
+    let activeThumb = $("<li>").addClass("list-inline-item active");
+    let activeThumbLink = $("<a>")
+      .attr("id", "carousel-selector-0")
+      .addClass("selected")
+      .attr("data-slide-to", "0")
+      .attr("data-target", "#custCarousel");
+    activeThumbLink.append(
+      $("<img>").attr("src", selectedImages[0]).addClass("img-fluid")
+    );
+    activeThumb.append(activeThumbLink);
+    carouselIndicators.append(activeThumb);
 
-    thumbsList.addClass('thumbs-container');
-    marsImagesEl.append(thumbsList);
     for (let i = 1; i < selectedImages.length; i++) {
-      // Adds images to thumbnail section
-      let thumbLink = $("<a>")
-        .attr("id", `carousel-selector-${i}`)
-        .attr("data-slide-to", `${i}`)
-        .attr("data-target", "#custCarousel");
-
-      thumbLink.append(
-        $("<img>").attr("src", selectedImages[i]).addClass("img-fluid")
-      );
-      thumbsList.append(thumbLink);
+      let thumb = $("<li>").addClass("list-inline-item");
+    let thumbLink = $("<a>")
+      .attr("id", `carousel-selector-${i}`)
+      .addClass("selected")
+      .attr("data-slide-to", `${i}`)
+      .attr("data-target", "#custCarousel");
+    thumbLink.append(
+      $("<img>").attr("src", selectedImages[i]).addClass("img-fluid")
+    );
+    thumb.append(thumbLink);
+    carouselIndicators.append(thumb);
     }
-
-
+  }
   });
+
 }
 
 
