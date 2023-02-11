@@ -31,12 +31,15 @@ for (let i = 0; i < rovers.length; i++) {
     $(".datepicker-text").removeClass("hide");
     carouselContainer.removeClass("hide");
 
+
+    $("#datepicker").prop("defaultValue", (rovers[i][1]));
     queryImages(rovers[i][0].split("/").reverse().join("-"), rovers[i][1].split("/").reverse().join("-"));
 
     datepickerEl.datepicker({
       dateFormat: "dd/mm/yy",
       minDate: rovers[i][1], 
       maxDate:  rovers[i][2],
+      setDate: "-0d",
       defaultDate:  rovers[i][1],
       autoclose: true,
       onSelect: function (selectedDate) {
@@ -135,11 +138,7 @@ function queryImages(selectedDate, roverName) {
 }
 
 // style datepicker
-// carousel for images
 // text for header
 // media queries for the cards
 // back button
-// work on other cards
-// style carousel
-// chceck dates for datepicker to start with the correct date
-// error message if no images on that day
+// work on sojourner
