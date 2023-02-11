@@ -15,7 +15,8 @@ let nexrArrow = $(".carousel-control-next");
 let errorMessage = $("<div>").addClass("error-message");
 let selectedImages = [];
 let currentDate = new Date().toISOString().split('T')[0];
-console.log(currentDate)
+let backButtonLink = $("<a>").text("<< Back to Rovers").addClass('hide');
+$('.jumbotron-container').append(backButtonLink);
 
 cards = [perseveranceCard, curiosityCard, twinsCard];
 rovers = [['Perseverance', '18/02/2021', currentDate], 
@@ -27,7 +28,10 @@ for (let i = 0; i < rovers.length; i++) {
   cards[i].on("click", function (event) {
     event.preventDefault();
 
-    $(".container-fluid").empty();
+    $(".container-fluid").addClass('hide');
+    $(".choose-rover").addClass('hide');
+    backButtonLink.removeClass('hide');
+
     $(".datepicker-text").removeClass("hide");
     carouselContainer.removeClass("hide");
 
@@ -137,8 +141,15 @@ function queryImages(selectedDate, roverName) {
   });
 }
 
+backButtonLink.on('click', function(event) {
+  event.preventDefault();
+  $('.datepicker-text').addClass('hide');
+  $('.carousel-container').addClass('hide');
+  $(".container-fluid").removeClass('hide');
+  $(".choose-rover").removeClass('hide');
+  backButtonLink.addClass('hide');
+})
+
 // style datepicker
-// text for header
 // media queries for the cards
 // back button
-// work on sojourner

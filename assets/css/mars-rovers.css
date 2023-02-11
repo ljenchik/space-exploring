@@ -1,11 +1,10 @@
 body {
     background-color: rgba(9, 28, 91, 0.841);
 }
-
-.card-container {
-    display: flex;
-    margin: 10px;
-    padding: 10px;
+.choose-rover {
+    color: white;
+    text-align: center;
+    margin: 30px 0px;
 }
 
 .card {
@@ -22,6 +21,11 @@ body {
 
 .card:hover {
     box-shadow: 0 0 20px #ccc;
+}
+
+#datepicker {
+    width: 20%;
+    text-align: center;
 }
 
 .datepicker-text {
