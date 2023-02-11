@@ -21,15 +21,51 @@
     <title>Space Exploring</title>
 </head>
 <body>
-    <header class="jumbotron">
-        <div class="jumbotron-container text-center">
-            <h2>Welcome to Mars Mission!</h2>
-            <p>Over the years, NASA has sent robotic vehicles, called rovers, to Mars. 
-              Mars is a fascinating planet. It’s icy cold and covered in reddish dust and dirt. 
-              Like Earth, it has volcanoes, and flat plains. Scientists can also see channels that look like they were carved by rivers 
-              and streams a long, long time ago. NASA’s fifth Mars rover, Perseverance, landed on the Red Planet in February 2021!
+
+
+
+
+  
+    <header>
+
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark customNav">
+      
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+            <ul class="navbar-nav justify-content-end">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Learning Space<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="mars-rovers.html">Mars Images<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="quiz.html">Quiz<span class="sr-only">(current)</span></a>
+                
+              </li>
+  
+            </ul>
+        </div>
+      </nav>
+
+        <div class="jumbotron-container">
+          <!-- <div class="container"> -->
+            <div class="row"> 
+              <div class="col-md-5">
+            <h2>Welcome to Mars!</h2>
+            <p>Over the years, NASA has sent rovers to Mars. 
+              The most recent and succesful rovers are Spirit, Opportunity, Curiosity and Perseverance.
+              Mars rover, Perseverance, landed on the Red Planet in February 2021! 
+              Explore the rovers to discover more about Mars!
               </p>
-              
+              </div>
+            </div>
+          <!-- </div> -->
         </div>
     </header>
 
@@ -107,8 +143,10 @@
         </main>
 
 <div class="datepicker-text hide">
-  <div id="choose-date">Choose a date to see images taken by the rover on this date</div>
+  <h3 id="roverName"></h3>
+  <h5 id="choose-date">Choose a date to see images taken by the rover on this date</h5>
   <input id="datepicker" data-date-format="dd/mm/yyyy">
+
 </div>
 
     <!-- Carousel -->

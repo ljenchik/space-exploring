@@ -1,6 +1,22 @@
 body {
-    background-color: rgba(9, 28, 91, 0.841);
+    background-color: #070709
 }
+
+.jumbotron-container {
+    background-image: url('/images/jumbotron-for-mars-rovers.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    margin-top: 70px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+
+
 .choose-rover {
     color: white;
     text-align: center;
@@ -30,9 +46,12 @@ body {
 
 .datepicker-text {
     display: flex;
+    flex-direction: column;
     gap: 10px;
     justify-content: center;
+    align-items: center;
     color: white;
+    margin: 20px;
 }
 
 .hide {

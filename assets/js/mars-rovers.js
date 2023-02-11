@@ -24,6 +24,8 @@ rovers = [['Perseverance', '18/02/2021', currentDate],
 ['Spirit', '05/01/2004', '21/03/2010']
 ];
 
+roversToDisplay = ['Perseverance', 'Curiosity', 'Spirit and Opportunity'];
+
 for (let i = 0; i < rovers.length; i++) {  
   cards[i].on("click", function (event) {
     event.preventDefault();
@@ -33,6 +35,12 @@ for (let i = 0; i < rovers.length; i++) {
     backButtonLink.removeClass('hide');
 
     $(".datepicker-text").removeClass("hide");
+    if (i === 2) {
+      $("#roverName").text(`${roversToDisplay[i]}` + ' rovers');
+    }
+    else {
+      $("#roverName").text(`${roversToDisplay[i]}` + ' rover');
+    }
     carouselContainer.removeClass("hide");
 
 
