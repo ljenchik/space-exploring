@@ -1,6 +1,9 @@
 nasaApikey = "zhH0KJERQo5hx19MxD3hGmt6jiaOqgfd8bmoWQPd";
-let imageEl = $("#Perseverance");
-let titleEl = $("#Perseverance-rover");
+
+let perseveranceCard = $("#Perseverance");
+let curiosityCard = $("#Curiosity");
+let twinsCard = $('#Twins');
+
 let marsImagesEl = $("#mars-images");
 let datepickerEl = $("#datepicker");
 let datepickerTextEl = $("#choose-date");
@@ -11,43 +14,53 @@ let prevArrow = $(".carousel-control-prev");
 let nexrArrow = $(".carousel-control-next");
 let errorMessage = $("<div>").addClass("error-message");
 let selectedImages = [];
+let currentDate = new Date().toISOString().split('T')[0];
+console.log(currentDate)
 
-imageEl.on("click", function (event) {
-  event.preventDefault();
+cards = [perseveranceCard, curiosityCard, twinsCard];
+rovers = [['Perseverance', '18/02/2021', currentDate], 
+['Curiosity', '08/08/2012', currentDate], 
+['Spirit', '05/01/2004', '21/03/2010']
+];
 
-  $(".container-fluid").empty();
-  $(".datepicker-text").removeClass("hide");
-  carouselContainer.removeClass("hide");
+for (let i = 0; i < rovers.length; i++) {  
+  cards[i].on("click", function (event) {
+    event.preventDefault();
 
-  queryImages("2021-02-18");
+    $(".container-fluid").empty();
+    $(".datepicker-text").removeClass("hide");
+    carouselContainer.removeClass("hide");
 
-  datepickerEl.datepicker({
-    dateFormat: "dd/mm/yy",
-    minDate: "18/02/2021",
-    defaultDate: "18/02/2021",
-    autoclose: true,
-    onSelect: function (selectedDate) {
-      // Formats date to yyy-mm-dd for api query
-      $(".carousel-item").removeClass("active");
-      queryImages(selectedDate.split("/").reverse().join("-"));
-    },
+    queryImages(rovers[i][0].split("/").reverse().join("-"), rovers[i][1].split("/").reverse().join("-"));
+
+    datepickerEl.datepicker({
+      dateFormat: "dd/mm/yy",
+      minDate: rovers[i][1], 
+      maxDate:  rovers[i][2],
+      defaultDate:  rovers[i][1],
+      autoclose: true,
+      onSelect: function (selectedDate) {
+        $(".carousel-item").removeClass("active");
+        // Formats date to yyy-mm-dd for api query
+        queryImages(rovers[i][0], selectedDate.split("/").reverse().join("-"));
+      },
+    });
   });
-});
+}
 
-function perseveranceQueryURL(date) {
-  if (date) {
+// Build query
+function roverQueryURL(roverName, date) {
     let query =
-      "https://api.nasa.gov/mars-photos/api/v1/rovers/perseverance/photos?";
+      `https://api.nasa.gov/mars-photos/api/v1/rovers/${roverName}/photos?`;
     let queryParams = { api_key: nasaApikey };
     queryParams.earth_date = date;
     console.log(query + $.param(queryParams));
     return query + $.param(queryParams);
   }
-}
 
-function queryImages(selectedDate) {
+function queryImages(selectedDate, roverName) {
   $.ajax({
-    url: perseveranceQueryURL(selectedDate),
+    url: roverQueryURL(selectedDate, roverName,),
     method: "GET",
   }).then(function (response) {
     if (!response.photos || response.photos.length === 0) {
