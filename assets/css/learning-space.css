@@ -4,11 +4,25 @@ body{
     padding: 0px;
 }
 
-#planets {
+.jumbotron-container-learning-space {
+    display: flex;
+    justify-content: center;
+    background-image: url('images/planets.jpeg');
+    background-size: cover;
+    margin-top: 70px;
+
+}
+
+.planets-container {
     display: flex;
     flex-direction: row;
-    gap: 10px;
-    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.planets-container .card {
+    margin: 20px;
 }
 
 
