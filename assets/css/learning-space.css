@@ -7,9 +7,11 @@ body{
 .jumbotron-container-learning-space {
     display: flex;
     justify-content: center;
-    background-image: url('images/planets.jpeg');
+    background-image: url('/images/planets.jpeg');
     background-size: cover;
+    height: 400px;
     margin-top: 70px;
+    color: white;
 
 }
 
