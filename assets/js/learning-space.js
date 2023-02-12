@@ -9,7 +9,14 @@ let planets = [
   "neptune",
 ];
 
-let facts = ["Mercury is the smallest planet in our solar system – only slightly larger than Earth's Moon"
+let facts = ["Mercury is the smallest planet in our solar system",
+"Venus is the hottest planet in our solar system",
+"Earth is still the only planet known to host life",
+"Mars is also known as the Red Planet",
+"Jupiter is the biggest planet in our Solar System",
+"Saturn is adorned with a dazzling, complex system of icy rings",
+"Uranus was the first planet found with the aid of a telescope in 1781",
+"Neptune was the first planet located through mathematical calculations"
 ]
 
 for (let i = 0; i < planets.length; i++) {
@@ -66,7 +73,7 @@ function getPlanetData(planetName) {
     else {
         planetNameEl.append($("<p>").text("Moons: " + response.moons.length))
     }
-    planetNameEl.append($("<p>").text("Fact: " + "Mercury is the smallest planet in our solar system – only slightly larger than Earth's Moon"))
+    planetNameEl.append($("<p>").text("Fact: " + facts[i]));
     backCradEl.append(planetNameEl);
   });
 }
