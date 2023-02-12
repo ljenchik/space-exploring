@@ -5,13 +5,10 @@ body{
 }
 
 .jumbotron-container-learning-space {
-    display: flex;
-    justify-content: center;
     background-image: url('/images/planets.jpeg');
-    position: relative;
     background-size: cover;
     height: 400px;
-    margin-top: 70px;
+    margin-top: 50px;
     color: white;
 
 }
@@ -23,22 +20,19 @@ body{
     align-items: center;
     width: 100%;
     margin-top: 30px;
-    gap: 10px;
 }
 
 .planets-container .card {
-    margin: 20px;
+    margin: 20px 10px;
 }
 
 .hide {
     display: none;
 }
 
-.card .back{
-    height: 100% !important;
+.card .front {
+    margin: 10px 0px;
 }
-
-
 
 .back .card p {
     padding: 0px 10px;
@@ -52,12 +46,30 @@ body{
 }
 
 .back .card {
-    background-color: orange;
+    background-color: #fb750c;
+    margin-top: 0px;
 }
 
 p .card-text {
     background-color: white;
 }
+.card:hover {
+    box-shadow: 0 0 20px #ccc;
+    cursor: pointer;
+}
 
+.card a {
+    padding: 10px;
+    color: black;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+i {
+    align-self: flex-end;
+    padding: 10px;
+}
 
 
