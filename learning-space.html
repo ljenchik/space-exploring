@@ -64,19 +64,18 @@
           </ul>
         </div>
       </nav>
-
       <div class="jumbotron-container-learning-space jumbotron-fluid">
           <h1 class="display-4 py-4">Welcome to Learning Space!</h1>
       </div>
     </header>
 
     <main class="planets-container" id="planets">
-
       <div class="row">
 
         <!-- Card 1 -->
-        <div class="col-md-3">
-          <div class="card">
+        <div class="col-md-3" id="mercury">
+          <!-- Front of the card -->
+          <div class="card front" id="mercury">
             <img
               class="card-img-top"
               src="images/mercury.jpeg"
@@ -84,12 +83,17 @@
               id="mercury"
             />
             <p class="card-text mx-auto p-2">Mercury</p>
+
+          </div>
+
+          <!-- Back of the card -->
+          <div class="card back hide" id="mercury">
           </div>
         </div>
 
         <!-- Card 2 -->
-        <div class="col-md-3">
-          <div class="card">
+        <div class="col-md-3" id="venus">
+          <div class="card front" id="venus">
             <img
               class="card-img-top"
               src="images/venus.jpeg"
@@ -98,11 +102,16 @@
             />
             <p class="card-text mx-auto p-2">Venus</p>
           </div>
+           <!-- Back of the card -->
+           <div class="card back hide" id="venus">
+          </div>
         </div>
+         
+
 
        <!-- Card 3 -->
-       <div class="col-md-3">
-        <div class="card">
+       <div class="col-md-3" id="earth">
+        <div class="card front" id="earth">
           <img
             class="card-img-top"
             src="images/earth1.jpeg"
@@ -111,11 +120,15 @@
           />
           <p class="card-text mx-auto p-2">Earth</p>
         </div>
+        <!-- Back of the card -->
+        <div class="card back hide" id="earth">
+        </div>
       </div>
+        
     
      <!-- Card 4 -->
-     <div class="col-md-3">
-        <div class="card">
+     <div class="col-md-3" id="mars">
+        <div class="card front" id="mars">
           <img
             class="card-img-top"
             src="images/mars.jpeg"
@@ -124,12 +137,16 @@
           />
           <p class="card-text mx-auto p-2">Mars</p>
         </div>
+        <!-- Back of the card -->
+        <div class="card back hide" id="mars">
+        </div>
       </div>
+        
 
 
       <!-- Card 5 -->
-     <div class="col-md-3">
-      <div class="card">
+     <div class="col-md-3" id="jupiter">
+      <div class="card front" id="jupiter">
         <img
           class="card-img-top"
           src="images/jupiter.jpeg"
@@ -138,11 +155,14 @@
         />
         <p class="card-text mx-auto p-2">Jupiter</p>
       </div>
+      <!-- Back of the card -->
+      <div class="card back hide" id="jupiter">
+      </div>
     </div>
-
+      
     <!-- Card 6 -->
-    <div class="col-md-3">
-      <div class="card">
+    <div class="col-md-3" id="saturn">
+      <div class="card front" id="saturn">
         <img
           class="card-img-top"
           src="images/saturn.jpeg"
@@ -151,11 +171,15 @@
         />
         <p class="card-text mx-auto p-2">Saturn</p>
       </div>
+       <!-- Back of the card -->
+       <div class="card back hide" id="saturn">
+      </div>
     </div>
+     
 
      <!-- Card 7 -->
-     <div class="col-md-3">
-      <div class="card">
+     <div class="col-md-3" id="uranus">
+      <div class="card front" id="uranus">
         <img
           class="card-img-top"
           src="images/uranus.jpeg"
@@ -164,11 +188,15 @@
         />
         <p class="card-text mx-auto p-2">Uranus</p>
       </div>
+      <!-- Back of the card -->
+      <div class="card back hide" id="uranus">
+      </div>
     </div>
+      
 
     <!-- Card 7 -->
-    <div class="col-md-3">
-      <div class="card">
+    <div class="col-md-3" id="neptune">
+      <div class="card front" id="neptune">
         <img
           class="card-img-top"
           src="images/neptune.jpeg"
@@ -177,16 +205,12 @@
         />
         <p class="card-text mx-auto p-2">Neptune</p>
       </div>
+       <!-- Back of the card -->
+       <div class="card back hide" id="neptune">
+      </div>
     </div>
-
-
-
-
-    
+     
     </div>
-
-
-
 
 
     </main>

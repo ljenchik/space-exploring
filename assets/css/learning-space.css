@@ -29,6 +29,14 @@ body{
     margin: 20px;
 }
 
+.hide {
+    display: none;
+}
+
+.card p {
+    padding: 0px;
+    margin-bottom: 0px;
+}
 
 
 
