@@ -1,11 +1,26 @@
 body {
-    background-color: #06070Cff;
+    background-color: #070709
 }
 
-.card-container {
+.jumbotron-container {
+    background-image: url('/images/jumbotron-for-mars-rovers.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    margin-top: 70px;
+    justify-content: center;
     display: flex;
-    margin: 10px;
-    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+
+
+.choose-rover {
+    color: white;
+    text-align: center;
+    margin: 30px 0px;
 }
 
 .card {
@@ -24,28 +39,72 @@ body {
     box-shadow: 0 0 20px #ccc;
 }
 
-.date-label {
+#datepicker {
+    width: 20%;
     text-align: center;
+}
+
+.datepicker-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
     color: white;
+    margin: 20px;
 }
 
 .hide {
     display: none;
 }
 
-#mars-images {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: center;
+.error-message {
+    text-align: center;
     color: white;
-    padding: 10px;
-}
-
-#mars-images img {
-    width: 55%;
-    border-radius: 10px;
 }
 
 
+
+
+/* Carousel styles*/
+
+.carousel-container{
+      margin-top:40px;
+      margin-bottom:10px;
+  }
+
+  .carousel-inner {
+    width: 60% !important;
+  }
+  .carousel-inner img {
+      width: 80%;
+      height: 80%;
+      border-radius: 10px;
+  }
+
+#custCarousel .carousel-indicators {
+    position: static;
+    margin-top:20px;
+}
+
+#custCarousel .carousel-indicators > li {
+  width:100px;
+}
+
+ #custCarousel .carousel-indicators li img {
+    display: block;
+    opacity: 0.5;
+ }
+
+  #custCarousel .carousel-indicators li.active img {
+    opacity: 1;
+  }
+
+  #custCarousel .carousel-indicators li:hover img {
+    opacity: 0.75;
+  }
+
+  .carousel-item img{
+
+    width:80%;
+  }

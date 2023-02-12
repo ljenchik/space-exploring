@@ -2,6 +2,14 @@ body{
     background-color: #06070Cff;
     color: #fff;
 }
+.customNav{
+  background-color: #06070Cff !important;
+  color: #fff !important;
+}
+.nav-link{
+color: #fff !important;
+}
+/* ------------------------------------------------ */
 .carousel-item {
     /* height: 32rem; */
     height: 43rem;
@@ -44,7 +52,42 @@ body{
     margin-right: .75rem;
     margin-left: .75rem;
   }
+  .textContent{
+    text-indent: 50px;
+    text-align: justify;
+  }
+  .holder{
+    background-color: white !important;
+    border-radius: 50%!important;
+    width: 140px;
+    height: 140px;
+    display: inline-block;
+    min-height: 1em;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: currentcolor;
+    text-align: center;
+
+    
+  }
+
+  .beat {
+    animation: beat 2s infinite alternate;
+  }
+
+  @keyframes beat {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
   
+ 
   
   /* Featurettes
   ------------------------- */
@@ -59,7 +102,10 @@ body{
     line-height: 1;
     letter-spacing: -.05rem;
   }
-  
+  .text-muted {
+    --bs-text-opacity: 1;
+    color: rgb(73 77 82 / 75%)!important;
+}
   
   /* RESPONSIVE CSS
   -------------------------------------------------- */
@@ -90,9 +136,8 @@ body{
   }
   
 
-.customNav{
-    background-color: #06070Cff !important;
-}
+
+
 
 
 
