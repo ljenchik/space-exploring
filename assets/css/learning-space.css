@@ -8,6 +8,7 @@ body{
     display: flex;
     justify-content: center;
     background-image: url('/images/planets.jpeg');
+    position: relative;
     background-size: cover;
     height: 400px;
     margin-top: 70px;
@@ -21,6 +22,7 @@ body{
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-top: 30px;
 }
 
 .planets-container .card {
