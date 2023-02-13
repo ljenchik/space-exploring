@@ -1,5 +1,6 @@
 body {
-    background-color: #070709
+    background-color: #070709;
+    font-family: 'Rubik', sans-serif;
 }
 
 span
@@ -19,6 +20,11 @@ span
     padding: 20px;
     height: 250px;
     margin-top: 40px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.jumbotron-container h2 {
+    font-family: 'Bungee Spice', cursive;
 }
 
 .choose-rover {
@@ -32,6 +38,7 @@ span
     border-radius: 10px;
     offset: -10px;
 }
+
 
 .card img {
     border-bottom-right-radius: 10px;
