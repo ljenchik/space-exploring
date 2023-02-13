@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
+<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link
       rel="stylesheet"
@@ -17,6 +18,7 @@
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="assets/css/mars-rovers.css" />
+    <link rel="icon" href="./images/favicon.png">
 
     <title>Space Exploring</title>
 </head>
@@ -48,16 +50,17 @@
       </div>
     </nav>
 
-      <div class="jumbotron-container">
-        <!-- <div class="container"> -->
-          <div class="row"> 
-            <div class="col-md-5">
-          <h2>Welcome to Mars!</h2>
-          <p>Over the years, NASA has sent rovers to Mars. 
-            The most recent and succesful rovers are Spirit, Opportunity, Curiosity and Perseverance.
-            Mars rover, Perseverance, landed on the Red Planet in February 2021! 
-            Explore the rovers to discover more about Mars!
-            </p>
+        <div class="jumbotron-container">
+          <!-- <div class="container"> -->
+            <div class="row"> 
+              <div class="col-md-5 mx-4">
+            <h2>Welcome to Mars!</h2>
+            <p>Over the years, NASA has sent rovers to Mars. 
+              The most recent and succesful rovers are Spirit, Opportunity, Curiosity and Perseverance.
+              Mars rover, Perseverance, landed on the Red Planet in February 2021! 
+              Explore the rovers to discover more about Mars!
+              </p>
+              </div>
             </div>
           </div>
         <!-- </div> -->
@@ -65,34 +68,18 @@
   </header>
 
     <main>
-      <h5 class="choose-rover">Click on rovers to see images taken on Mars</h5>
-        <div class="container-fluid">
-        <div class="row"> 
+    <h5 class="choose-rover"><span class="nowrap">Click on a rover</span> <span class="nowrap">to see images taken on Mars</span></h5>
+      <div class="container-fluid ">
+       
+        <div class="row justify-content-center"> 
 
-            <!-- Card 1 
-          <div class="col-md-3">
-            <div class="card" >
-                <img class="card-img-top" src="images/sojourner.png" alt="Mars rover Sojourner" id="Sojourner">
+              <!-- Card 1 -->
+              <div class="col-xs-10 col-sm-8 col-md-7 col-lg-4 col-xl-3">
+              <div class="card h-100" id="Twins">
+                <img class="card-img-top" src="images/spirit&opportunity.png" alt="Mars rovers Spirit and Opportunity" id="Twins">
                 <div class="card-body">
                   <p class="card-text">
-                    <h5><strong>Sojourner</strong></h5>
-                    <p>The first wheeled vehicle to rove on a planet other than Earth</p>
-                    <p>Landed: July, 1997</p>
-                    <p>Mission: To test in the Martian environment technical solutions that were 
-                        developed by engineers of the NASA research laboratories</p>
-                        <a href="https://spaceplace.nasa.gov/mars-sojourner/en/"> <img src="images/nasa-logo.png" width="50px"> Sojouner</a>
-                  </p>
-                </div>
-              </div>
-          </div> -->
-
-              <!-- Card 2 -->
-              <div class="col-md-4">
-              <div class="card" id="Twins">
-                <img class="card-img-top" src="images/spirit&opportunity.png" alt="Mars rovers Spirit and Opportunity">
-                <div class="card-body">
-                  <p class="card-text">
-                    <h5><strong>Spirit and Opportunity</strong></h5>
+                    <h4><strong>Spirit and Opportunity</strong></h4>
                     <p>Twin robotic rovers lived well beyond their planned 90-day missions</p>
                     <p>Landed: January, 2004</p>
                     </p>Mission: To find evidence of water on Mars</p>
@@ -102,12 +89,12 @@
               </div>
             </div>
 
-              <!-- Card 3 -->
-              <div class="col-md-4">
-              <div class="card" id="Curiosity">
-                <img class="card-img-top" src="images/curiosity.png" alt="Mars rover Curiosity">
+              <!-- Card 2 -->
+              <div class="col-xs-10 col-sm-8 col-md-7 col-lg-4 col-xl-3">
+              <div class="card  h-100" id="Curiosity">
+                <img class="card-img-top" src="images/curiosity.png" alt="Mars rover Curiosity" id="Curiosity">
                 <div class="card-body">
-                  <p class="card-text"><h5><strong>Curiosity</strong></h5>
+                  <p class="card-text"><h4><strong>Curiosity</strong></h4>
                     <p>Curiosity is a car-sized Mars rover designed to explore the Gale crater on Mars</p>
                     <p>Landed: August, 2012 </p>
                     <p>Mission: To find out if Mars once had what all life needs, lasting water and the right chemicals</p>
@@ -117,12 +104,12 @@
               </div>
             </div>
 
-              <!-- Card 4 -->
-              <div class="col-md-4">
-            <div class="card" >
+              <!-- Card 3 -->
+              <div class="col-xs-10 col-sm-8 col-md-7 col-lg-4 col-xl-3">
+            <div class="card  h-100" id="Perseverance">
                 <img class="card-img-top" src="images/perseverance.png" alt="Mars rover Perseverance" id="Perseverance">
                 <div class="card-body">
-                  <p class="card-text"><h5 id="Perseverance-rover"><strong>Perseverance</strong></h5>
+                  <p class="card-text"><h4 id="Perseverance-rover"><strong>Perseverance</strong></h4>
                     <p>Perseverance is similar to Curiosity, carries a small robotic helicopter </p>
                     <p>Landed: February, 2021</p>
                     <p>Mission: To seek out evidence of former life, 
@@ -138,7 +125,7 @@
 
 <div class="datepicker-text hide">
   <h3 id="roverName"></h3>
-  <h5 id="choose-date">Choose a date to see images taken by the rover on this date</h5>
+  <h5 id="choose-date">Choose a date to see images taken on this date</h5>
   <input id="datepicker" data-date-format="dd/mm/yyyy">
 
 </div>

@@ -1,5 +1,11 @@
 body {
-    background-color: #070709
+    background-color: #070709;
+    font-family: 'Rubik', sans-serif;
+}
+
+span
+{
+  display: inline-block;
 }
 
 .jumbotron-container {
@@ -7,15 +13,19 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
-    margin-top: 70px;
     justify-content: center;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
+    height: 250px;
+    margin-top: 40px;
+    font-family: 'Rubik', sans-serif;
 }
 
-
+.jumbotron-container h2 {
+    font-family: 'Bungee Spice', cursive;
+}
 
 .choose-rover {
     color: white;
@@ -27,8 +37,8 @@ body {
     border: 3px double rgb(223, 94, 9);
     border-radius: 10px;
     offset: -10px;
-    height: 600px;
 }
+
 
 .card img {
     border-bottom-right-radius: 10px;
@@ -65,16 +75,19 @@ body {
 
 
 
-
 /* Carousel styles*/
 
 .carousel-container{
-      margin-top:40px;
+      margin-top:20px;
       margin-bottom:10px;
   }
 
+  .row {
+    gap: 20px;
+}
+
   .carousel-inner {
-    width: 60% !important;
+    width: 80% !important;
   }
   .carousel-inner img {
       width: 80%;
@@ -93,18 +106,83 @@ body {
 
  #custCarousel .carousel-indicators li img {
     display: block;
-    opacity: 0.5;
+    opacity: 1;
  }
 
   #custCarousel .carousel-indicators li.active img {
     opacity: 1;
+    border: 2px solid white;
   }
 
   #custCarousel .carousel-indicators li:hover img {
-    opacity: 0.75;
+    opacity: 1;
   }
 
-  .carousel-item img{
+  @media screen and (max-width: 575px){
+    .jumbotron-container {
+        height: 200px;
+        margin-top: 80px;
+    }
 
-    width:80%;
-  }
+    #datepicker {
+        width: 40%;
+    }
+  
+    .carousel-inner {
+        width: 70% !important;
+      }
+   
+
+}
+
+
+@media screen and (min-width: 576px){
+    .jumbotron-container {
+        height: 180px;
+        margin-top: 60px;
+    }
+
+    #datepicker {
+        width: 30%;
+    }
+  
+    .carousel-inner {
+        width: 70% !important;
+      }
+    }
+
+
+@media screen and (min-width: 768px){
+    .jumbotron-container {
+        height: 250px;
+        margin-top:70px;
+    }
+
+    #datepicker {
+        width: 25%;
+    }
+  
+    .carousel-inner {
+        width: 60% !important;
+      }
+
+    }
+
+
+@media screen and (min-width: 992px){
+    .jumbotron-container {
+        height: 200px;
+        margin-top:70px;
+    }
+
+    #datepicker {
+        width: 15%;
+    }
+  
+    .carousel-inner {
+        width: 50% !important;
+      }
+      .row {
+        gap: 0px;
+      }
+}
