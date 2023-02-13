@@ -2,7 +2,7 @@ nasaApikey = "zhH0KJERQo5hx19MxD3hGmt6jiaOqgfd8bmoWQPd";
 
 let perseveranceCard = $("img#Perseverance");
 let curiosityCard = $("img#Curiosity");
-let twinsCard = $('img#Twins.img');
+let twinsCard = $('img#Twins');
 
 let marsImagesEl = $("#mars-images");
 let datepickerEl = $("#datepicker");
@@ -35,12 +35,7 @@ for (let i = 0; i < rovers.length; i++) {
     backButtonLink.removeClass('hide');
 
     $(".datepicker-text").removeClass("hide");
-    if (i === 2) {
-      $("#roverName").text(`${roversToDisplay[i]}` + ' rovers');
-    }
-    else {
-      $("#roverName").text(`${roversToDisplay[i]}` + ' rover');
-    }
+      $("#roverName").text(`${roversToDisplay[i]}`);
     carouselContainer.removeClass("hide");
 
 
@@ -159,5 +154,3 @@ backButtonLink.on('click', function(event) {
 })
 
 // style datepicker
-// media queries for the cards
-// back button
