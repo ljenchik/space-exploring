@@ -1,8 +1,8 @@
 nasaApikey = "zhH0KJERQo5hx19MxD3hGmt6jiaOqgfd8bmoWQPd";
 
-let perseveranceCard = $("#Perseverance");
-let curiosityCard = $("#Curiosity");
-let twinsCard = $('#Twins');
+let perseveranceCard = $("img#Perseverance");
+let curiosityCard = $("img#Curiosity");
+let twinsCard = $('img#Twins.img');
 
 let marsImagesEl = $("#mars-images");
 let datepickerEl = $("#datepicker");
