@@ -1,0 +1,75 @@
+.learning-space-body {
+    background-color: #06070Cff;
+    margin: 0px;
+    padding: 0px;
+}
+
+.jumbotron-container-learning-space {
+    background-image: url('/images/planets.jpeg');
+    background-size: cover;
+    height: 400px;
+    margin-top: 50px;
+    color: white;
+
+}
+
+.planets-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.planets-container .card {
+    margin: 20px 10px;
+}
+
+.hide {
+    display: none;
+}
+
+.card .front {
+    margin: 10px 0px;
+}
+
+.back .card p {
+    padding: 0px 10px;
+    margin-bottom: 0px;
+    background-color: black;
+    color: white;
+}
+.back .card h5 {
+    text-align: center;
+    padding: 10px
+}
+
+.back .card {
+    background-color: #fb750c;
+    margin-top: 0px;
+}
+
+p .card-text {
+    background-color: white;
+}
+.card:hover {
+    box-shadow: 0 0 20px #ccc;
+    cursor: pointer;
+}
+
+.card a {
+    padding: 10px;
+    color: black;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+i {
+    align-self: flex-end;
+    padding: 10px;
+}
+
+

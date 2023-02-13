@@ -23,64 +23,75 @@
     <title>Space Exploring</title>
 </head>
 <body>
+  <header>
 
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark customNav">
+    
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+          <ul class="navbar-nav justify-content-end">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Learning Space<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="mars-rovers.html">Mars Images<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="quiz.html">Quiz<span class="sr-only">(current)</span></a>
+              
+            </li>
 
+          </ul>
+      </div>
+    </nav>
 
-
-  
-    <header>
-
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark customNav">
-      
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
-            <ul class="navbar-nav justify-content-end">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Learning Space<span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="mars-rovers.html">Mars Images<span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="quiz.html">Quiz<span class="sr-only">(current)</span></a>
-                
-              </li>
-  
-            </ul>
-        </div>
-      </nav>
-
-        <div class="jumbotron-container">
-          <!-- <div class="container"> -->
-            <div class="row"> 
-              <div class="col-md-5 mx-4">
-            <h2>Welcome to Mars!</h2>
-            <p>Over the years, NASA has sent rovers to Mars. 
-              The most recent and succesful rovers are Spirit, Opportunity, Curiosity and Perseverance.
-              Mars rover, Perseverance, landed on the Red Planet in February 2021! 
-              Explore the rovers to discover more about Mars!
-              </p>
-              </div>
+      <div class="jumbotron-container">
+        <!-- <div class="container"> -->
+          <div class="row"> 
+            <div class="col-md-5 mx-4">
+          <h2>Welcome to Mars!</h2>
+          <p>Over the years, NASA has sent rovers to Mars. 
+            The most recent and succesful rovers are Spirit, Opportunity, Curiosity and Perseverance.
+            Mars rover, Perseverance, landed on the Red Planet in February 2021! 
+            Explore the rovers to discover more about Mars!
+            </p>
             </div>
-          <!-- </div> -->
-        </div>
-    </header>
+          </div>
+        <!-- </div> -->
+      </div>
+  </header>
 
     <main>
-    <h5 class="choose-rover"><span class="nowrap">Click on a rover</span> <span class="nowrap">to see images taken on Mars</span></h5>
-      <div class="container-fluid ">
-       
-        <div class="row justify-content-center"> 
+      <h5 class="choose-rover">Click on rovers to see images taken on Mars</h5>
+        <div class="container-fluid">
+        <div class="row"> 
 
-              <!-- Card 1 -->
-              <div class="col-xs-10 col-sm-8 col-md-7 col-lg-4 col-xl-3">
-              <div class="card h-100" id="Twins">
-                <img class="card-img-top" src="images/spirit&opportunity.png" alt="Mars rovers Spirit and Opportunity" id="Twins">
+            <!-- Card 1 
+          <div class="col-md-3">
+            <div class="card" >
+                <img class="card-img-top" src="images/sojourner.png" alt="Mars rover Sojourner" id="Sojourner">
+                <div class="card-body">
+                  <p class="card-text">
+                    <h5><strong>Sojourner</strong></h5>
+                    <p>The first wheeled vehicle to rove on a planet other than Earth</p>
+                    <p>Landed: July, 1997</p>
+                    <p>Mission: To test in the Martian environment technical solutions that were 
+                        developed by engineers of the NASA research laboratories</p>
+                        <a href="https://spaceplace.nasa.gov/mars-sojourner/en/"> <img src="images/nasa-logo.png" width="50px"> Sojouner</a>
+                  </p>
+                </div>
+              </div>
+          </div> -->
+
+              <!-- Card 2 -->
+              <div class="col-md-4">
+              <div class="card" id="Twins">
+                <img class="card-img-top" src="images/spirit&opportunity.png" alt="Mars rovers Spirit and Opportunity">
                 <div class="card-body">
                   <p class="card-text">
                     <h4><strong>Spirit and Opportunity</strong></h4>
@@ -93,10 +104,10 @@
               </div>
             </div>
 
-              <!-- Card 2 -->
-              <div class="col-xs-10 col-sm-8 col-md-7 col-lg-4 col-xl-3">
-              <div class="card  h-100" id="Curiosity">
-                <img class="card-img-top" src="images/curiosity.png" alt="Mars rover Curiosity" id="Curiosity">
+              <!-- Card 3 -->
+              <div class="col-md-4">
+              <div class="card" id="Curiosity">
+                <img class="card-img-top" src="images/curiosity.png" alt="Mars rover Curiosity">
                 <div class="card-body">
                   <p class="card-text"><h4><strong>Curiosity</strong></h4>
                     <p>Curiosity is a car-sized Mars rover designed to explore the Gale crater on Mars</p>
@@ -108,9 +119,9 @@
               </div>
             </div>
 
-              <!-- Card 3 -->
-              <div class="col-xs-10 col-sm-8 col-md-7 col-lg-4 col-xl-3">
-            <div class="card  h-100" id="Perseverance">
+              <!-- Card 4 -->
+              <div class="col-md-4">
+            <div class="card" >
                 <img class="card-img-top" src="images/perseverance.png" alt="Mars rover Perseverance" id="Perseverance">
                 <div class="card-body">
                   <p class="card-text"><h4 id="Perseverance-rover"><strong>Perseverance</strong></h4>
@@ -129,7 +140,7 @@
 
 <div class="datepicker-text hide">
   <h3 id="roverName"></h3>
-  <h5 id="choose-date">Choose a date to see images taken on this date</h5>
+  <h5 id="choose-date">Choose a date to see images taken by the rover on this date</h5>
   <input id="datepicker" data-date-format="dd/mm/yyyy">
 
 </div>
