@@ -37,10 +37,6 @@ for (let i = 0; i < planets.length; i++) {
   let frontCardEl = $("#" + planets[i] + ".card" + ".front");
   let backCardEl = $("#" + planets[i] + ".back");
 
-  // let cardEl = $("#mercury");
-  // let frontCardEl = $("#mercury .front");
-  // let backCradEl = $("#mercury .back");
-
   frontCardEl.on("click", function (event) {
     event.preventDefault();
     frontCardEl.addClass("hide");
@@ -93,4 +89,4 @@ for (let i = 0; i < planets.length; i++) {
   }
 }
 
-//add links to read more about planets
+// Add measurement units for the data
