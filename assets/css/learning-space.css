@@ -34,6 +34,10 @@
     margin-top: 30px;
 }
 
+.row {
+    align-content: center;
+    margin: 0px 10px;
+}
 .planets-container .card {
     margin: 20px 10px;
 }
