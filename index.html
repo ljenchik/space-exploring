@@ -8,12 +8,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   
-
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <!-- <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     /> -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="icon" href="./images/favicon.png">
 
     <title>Space Exploring</title>
 </head>
@@ -22,7 +23,7 @@
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark customNav">
       
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
@@ -31,7 +32,7 @@
               <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Learning Space<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="learning-space.html">Learning Space<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
               <a class="nav-link" href="mars-rovers.html">Mars Images<span class="sr-only">(current)</span></a>
@@ -62,7 +63,7 @@
           <div class="carousel-caption text-start">
             <h1>Welcome to the Space Exploring!</h1>
             <p>Begin a journey that offers a deeper and more comprehensive view of the universe and our place in it.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Get Started</a></p>
+            <p><a class="btn btn-lg btn-primary" href="learning-space.html">Get Started</a></p>
           </div>
         </div>
       </div>
@@ -83,7 +84,7 @@
           <div class="carousel-caption text-end">
             <h1>Gallery</h1>
             <p>See amazing photos taken in space.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+            <p><a class="btn btn-lg btn-primary" href="mars-rovers.html">Browse gallery</a></p>
           </div>
         </div>
       </div>
@@ -156,7 +157,7 @@
     <!-- START THE FEATURETTES -->
 
     <hr class="featurette-divider">
-
+    <a href="learning-space.html" style="text-decoration: none; color: #fff;">
     <div class="row featurette">
       <div class="col-md-7">
         <h2 class="featurette-heading">Join us in exploring the mysteries of the universe!  <span class="text-muted">Learning Space.</span></h2>
@@ -169,35 +170,37 @@
 
       </div>
     </div>
+  </a>
 
     <hr class="featurette-divider">
-
+    
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
+      <a href="mars-rovers.html" style="text-decoration: none; color: #fff;">
         <h2 class="featurette-heading">Discover the red planet like never before! <span class="text-muted">Mars Images.</span></h2>
         <p class="lead">Find out more on the Mars images to explore its unique features and landscapes</p>
       </div>
       <div class="col-md-5 order-md-1">
         <a href="quiz.html"><img src="./images/marsPlanet.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" role="img" aria-label="Placeholder: 500x500"></a>
         <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
-
+      </a>
       </div>
     </div>
 
     <hr class="featurette-divider">
+    <a href="quiz.html" style="text-decoration: none; color: #fff;">
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Are you a universe expert? <span class="text-muted">take a Quiz.</span></h2>
+          <p class="lead">Put your space knowledge to the test!<br>Find out more on the quiz and see how much you know about the universe and beyond.</p>
+        </div>
+        <div class="col-md-5">
+          <img src="./images/quiz.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" role="img" aria-label="Placeholder: 500x500">
+          <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
 
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading">Are you a universe expert? <span class="text-muted">take a Quiz.</span></h2>
-        <p class="lead">Put your space knowledge to the test!<br>Find out more on the quiz and see how much you know about the universe and beyond.</p>
+        </div>
       </div>
-      <div class="col-md-5">
-        <img src="./images/quiz.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" role="img" aria-label="Placeholder: 500x500">
-        <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
-
-      </div>
-    </div>
-
+    </a>
     <hr class="featurette-divider">
 
     <!-- /END THE FEATURETTES -->

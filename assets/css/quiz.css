@@ -1,20 +1,47 @@
 body {
     font-family: Arial;
-    font-size: 120%;
+    /* font-size: 120%; */
     background-color: #06070Cff;
     color: #fff;
+    font-family: 'Rubik', sans-serif;
+    
+  }
+  .customNav{
+    background-color: #06070Cff !important;
+    color: #fff !important;
+  }
+  .nav-link{
+    color: #fff !important;
+  }
+
+  .container{
+    background-image: url(/images/Drawing.png);
+    border-radius: 20px;
+    /* background-color: #fff; */
+    color: #06070Cff;
+    height: 500px;
+    background-size:cover;
+    background-repeat: no-repeat;
+  }
+  .jumbotron{
+    padding-top: 100px;
   }
   
   a {
     padding-left: 10px;
-    color: #fff;
+    color: black;
     text-decoration: none;
     transition: color 0.1s;
   }
-  
-  a:hover {
-    color: #322fdf;
+  .head{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 25px;
   }
+  
+  /* a:hover {
+    color: #322fdf;
+  } */
   
   button {
     display: inline-block;
@@ -47,18 +74,20 @@ body {
     overflow: auto;
   }
   
-  li {
+  /* li {
     padding: 5px;
     list-style: decimal inside none;
   }
   
   li:nth-child(odd) {
     background-color: #f3edfc;
-  }
+  } */
   
   .wrapper {
-    margin: 100px auto 0 auto;
-    max-width: 600px;
+    margin: 0 auto;
+    max-width: 800px;
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
   }
   
   .hide {
@@ -69,11 +98,11 @@ body {
     text-align: center;
   }
   
-  .scores {
+  /* .scores {
     position: absolute;
     top: 10px;
     left: 10px;
-  }
+  } */
   
   .feedback {
     font-style: italic;
@@ -84,8 +113,26 @@ body {
     border-top: 2px solid #ccc;
   }
   
-  .timer {
+  /* .timer {
     position: absolute;
     top: 10px;
     right: 10px;
+  } */
+
+  
+  .beat {
+    animation: beat 2s infinite alternate;
   }
+
+  @keyframes beat {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
