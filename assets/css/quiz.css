@@ -21,6 +21,7 @@ body {
     color: #06070Cff;
     height: 500px;
     background-size:cover;
+    background-repeat: no-repeat;
   }
   .jumbotron{
     padding-top: 100px;
