@@ -2,6 +2,7 @@
     background-color: #06070Cff;
     margin: 0px;
     padding: 0px;
+    font-family: 'Rubik', sans-serif;
 }
 .customNav{
     background-color: #06070Cff !important;
@@ -22,7 +23,11 @@
     height: 400px;
     margin-top: 50px;
     color: white;
+    font-family: 'Rubik', sans-serif;
+}
 
+.jumbotron-container-learning-space h2 {
+    font-family: 'Bungee Spice', cursive;
 }
 
 .planets-container {
@@ -38,6 +43,7 @@
     align-content: center;
     margin: 0px 10px;
 }
+
 .planets-container .card {
     margin: 20px 10px;
 }
