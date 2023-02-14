@@ -3,7 +3,10 @@
     margin: 0px;
     padding: 0px;
 }
-
+.customNav{
+    background-color: #06070Cff !important;
+    color: #fff !important;
+  }
 .jumbotron-container-learning-space {
     background-image: url('/images/planets.jpeg');
     background-size: cover;
