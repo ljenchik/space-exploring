@@ -2,7 +2,7 @@
 
 ## The application is live at: https://ljenchik.github.io/space-exploring/
 
-Welcome to Space Exploring! It's a website for children and teenagers about space which was created by the team of two (ljenchik and Mateusuk). The website allows users to explore interesting facts about our solar system, view images taken by Mars rovers, and score the most in the space quiz. We used the data from NASA Open API (https://api.nasa.gov) and The Solar System OpenData (https://api.le-systeme-solaire.net/en/). 
+Welcome to Space Exploring! It's a website for children and teenagers about space which was created by the team of two (ljenchik and mateusuk). The website allows users to explore interesting facts about our solar system, view images taken by Mars rovers, and score the most in the space quiz. We used the data from NASA Open API (https://api.nasa.gov) and The Solar System OpenData (https://api.le-systeme-solaire.net/en/). 
 
 ### Usage
 
