@@ -8,6 +8,14 @@ body {
     background-color: #06070Cff !important;
     color: #fff !important;
   }
+  .nav-link:hover{
+    color:#DF4F12ff !important;
+  }
+
+  .navbar-nav{
+    margin-right: 10px;
+  }
+  
 span
 {
   display: inline-block;
@@ -57,6 +65,7 @@ span
 
 .card:hover {
     box-shadow: 0 0 20px #ccc;
+    cursor: pointer;
 }
 
 #datepicker {

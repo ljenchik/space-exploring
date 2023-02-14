@@ -7,6 +7,15 @@
     background-color: #06070Cff !important;
     color: #fff !important;
   }
+  .nav-link:hover{
+    color:#DF4F12ff !important;
+  }
+
+  .navbar-nav{
+    margin-right: 10px;
+  }
+  
+
 .jumbotron-container-learning-space {
     background-image: url('/images/planets.jpeg');
     background-size: cover;

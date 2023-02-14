@@ -13,6 +13,13 @@ body {
   .nav-link{
     color: #fff !important;
   }
+  .nav-link:hover{
+    color:#DF4F12ff !important;
+  }
+  .navbar-nav{
+    margin-right: 10px;
+  }
+  
 
   .container{
     background-image: url(/images/Drawing.png);
