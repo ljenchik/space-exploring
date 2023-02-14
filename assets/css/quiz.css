@@ -22,9 +22,8 @@ body {
   
 
   .container{
-    background-image: url(/images/Drawing.png);
+    background-image: url('../../images/Drawing.png');
     border-radius: 20px;
-    /* background-color: #fff; */
     color: #06070Cff;
     height: 500px;
     background-size:cover;

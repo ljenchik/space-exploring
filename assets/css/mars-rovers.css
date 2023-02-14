@@ -22,7 +22,7 @@ span
 }
 
 .jumbotron-container {
-    background-image: url('/images/jumbotron-for-mars-rovers.jpeg');
+    background-image: url('../../images/jumbotron-for-mars-rovers.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
