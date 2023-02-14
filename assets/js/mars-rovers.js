@@ -81,7 +81,7 @@ function queryImages(selectedDate, roverName) {
       nexrArrow.addClass("hide");
 
       errorMessage.text(
-        "Np photographs were taken on this date. Please choose another date"
+        "No photographs were taken on this date. Please choose another date"
       );
       carouselContainer.append(errorMessage);
     } else {
