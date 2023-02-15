@@ -2,13 +2,13 @@
 
 ## The application is live at: https://ljenchik.github.io/space-exploring/
 
-Welcome to Space Exploring! It's a website for children and teenagers about space which was created by the team of two (ljenchik and mateusuk). The website allows users to explore interesting facts about our solar system, view images taken by Mars rovers, and score the most in the space quiz. We used the data from NASA Open API (https://api.nasa.gov) and The Solar System OpenData (https://api.le-systeme-solaire.net/en/). 
+Welcome to Space Exploring! It's a website for children and teenagers about space which was created by the team of two (ljenchik and mateusuk). The website allows users to explore interesting facts about the solar system, view images taken by Mars rovers, and score in the space quiz. We used the data from NASA Open API (https://api.nasa.gov) and The Solar System OpenData (https://api.le-systeme-solaire.net/en/). 
 
 ### Usage
 
 As a user I want to learn about Space and Mars Rovers, view images from Mars and take a quiz to test my knowledge about our Solar System.
 
-- When a user opens a home page they are presented with the carousel of space images that also serve as the links to the other website pages: Learning Space, Mars Rovers and Quiz. Home page is featured with the section of interesting facts about space and the following paragraphs that lead to the other pages of the website.
+- When a user opens a home page they are presented with the carousel of space images that also serve as the links to the other website pages: Learning Space, Mars Images and Quiz. Home page is featured with the section of interesting facts about space and the following paragraphs that lead to the other pages of the website.
 
 <p float="center">
   <img src="./assets/screenshots/home-page-1.png"  width="300"/>
@@ -40,4 +40,5 @@ As a user I want to learn about Space and Mars Rovers, view images from Mars and
 </p>
 
 All pages are responsive and are designed in the same style.
+We use information from https://solarsystem.nasa.gov/planets/overview/, https://spaceplace.nasa.gov/ and https://childwellbeing.asu.edu/SpaceFacts; images are from https://unsplash.com/.
 
