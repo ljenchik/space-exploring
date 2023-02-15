@@ -40,6 +40,15 @@ span
     font-family: 'Bungee Spice', cursive;
 }
 
+#reload-link {
+    color: white !important;
+}
+
+#reload-link:hover {
+    color:#DF4F12ff !important;
+    text-decoration: none;
+}
+
 .choose-rover {
     color: white;
     text-align: center;
