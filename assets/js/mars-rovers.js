@@ -15,7 +15,7 @@ let nexrArrow = $(".carousel-control-next");
 let errorMessage = $("<div>").addClass("error-message");
 let selectedImages = [];
 let currentDate = new Date().toISOString().split('T')[0];
-let backButtonLink = $("<a>").text("<< Back to Rovers").addClass('hide');
+let backButtonLink = $("<a>").text("<< Back to Rovers").addClass('hide').attr('href', './mars-rovers.html').attr('id', 'reload-link');
 $('.jumbotron-container').append(backButtonLink);
 
 cards = [perseveranceCard, curiosityCard, twinsCard];
@@ -143,14 +143,14 @@ function queryImages(selectedDate, roverName) {
     }
   });
 }
-
-backButtonLink.on('click', function(event) {
-  event.preventDefault();
-  $('.datepicker-text').addClass('hide');
-  $('.carousel-container').addClass('hide');
-  $(".container-fluid").removeClass('hide');
-  $(".choose-rover").removeClass('hide');
-  backButtonLink.addClass('hide');
-})
+// `
+// backButtonLink.on('click', function(event) {
+//   event.preventDefault();
+//   $('.datepicker-text').addClass('hide');
+//   $('.carousel-container').addClass('hide');
+//   $(".container-fluid").removeClass('hide');
+//   $(".choose-rover").removeClass('hide');
+//   backButtonLink.addClass('hide');
+// })`
 
 // style datepicker
